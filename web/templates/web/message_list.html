@@ -1,0 +1,13 @@
+{% extend "base.html"%}
+
+{% block content %}
+<ul>
+    {% for msg in message_list %}
+    <li>
+        {{msg.publication_date }}
+        <a href="{% url 'msg_view msg.id'%}">
+    </li>     
+    {% endfor %}
+    <ul>
+        {% endlock %}
+
