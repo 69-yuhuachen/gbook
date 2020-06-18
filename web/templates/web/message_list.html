@@ -6,6 +6,8 @@
     <li>
         {{msg.publication_date }}
         <a href="{% url 'msg_view msg.id'%}">
+    {% if user.is_authenticated %}
+    <a href="{% url 'msg_view msg.id'%}">刪除</a>
     </li>     
     {% endfor %}
     <ul>
